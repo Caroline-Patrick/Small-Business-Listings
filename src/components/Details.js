@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import {useRoutes, useParams} from 'react-router-dom';
+import {Container} from '@mui/material'
 
 const Details =(props)=> {
     const {id }= useParams();
@@ -25,13 +26,15 @@ const Details =(props)=> {
     }
 
     return (
+      <Container>  
         <div>
         <h1>{business.name}</h1>
         <p>{business.address}</p>
         <p>{business.hours}</p>
         <p>{business.description}</p>
-        <div style={{ height: '400px', width: '100%' }} ref={mapRef} />
+        <div style={{ height: '400px', width: '50%' }} ref={mapRef} />
       </div>
+      </Container>
     )
 };
 

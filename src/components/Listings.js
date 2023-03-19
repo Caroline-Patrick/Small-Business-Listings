@@ -3,8 +3,10 @@ import { Table, TableBody, Paper, CardActions, Container, TableContainer, TableR
 import { Link } from 'react-router-dom';
 
 
+
 const Listings = (props) => {
 
+  
     return (
         <Container>        
         <TableContainer component={Paper}>

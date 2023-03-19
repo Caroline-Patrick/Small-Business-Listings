@@ -1,6 +1,7 @@
 export const initialState = {
- 
+  user: null,
     businesses: [
+     
       {
         id: 1, 
         name: 'Pinthouse Pizza',

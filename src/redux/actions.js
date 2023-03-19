@@ -3,14 +3,15 @@ export const addBusiness = (business) => {
         type: 'ADD_BUSINESS',
         value: business
     }
-}
+};
 
 export const removeBusiness = (index) => {
     return {
         type: 'REMOVE_BUSINESS',
         value: index
     }
-}
+};
+
 
 // export const fetchBusinesses = () => {
 //     const apiKey = process.env.REACT_APP_GOOGLE_API_KEY

@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 import {initialState} from './state';
 
+const user =(state=null)=> state;
 
 export const listingsReducer = (state = initialState, action) => {
     switch(action.type) {
@@ -13,22 +14,10 @@ export const listingsReducer = (state = initialState, action) => {
             return state
     }
 }
-// probably need to adjust this..
-const fetches = (state = [], action) => {
-    switch(action.type) {
-        case 'FETCH_BUSINESSES':
-            return action.value
-            break;
-        // case 'DELETE_BUSINESSES':
-        //     const makes = [...state]
-        //     makes.splice(action.value, 1)
-        //     return makes
-        default:
-            return state
-    }
-}
+
 const rootReducer = combineReducers({ 
     businesses: listingsReducer,
+    user: user
 });
 
 export default rootReducer;
