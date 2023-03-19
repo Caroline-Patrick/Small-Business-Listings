@@ -1,12 +1,18 @@
 import React from 'react';
-import { Table, TableBody, Paper, CardActions, Container, TableContainer, TableRow, TableHead, TableCell } from '@mui/material'
 import { Link } from 'react-router-dom';
+import {useSelector} from 'react-redux'
+
+import AddListing from '../containers/AddListing';
+import DeleteIcon from '@mui/icons-material/Delete';
+import { Table, TableBody, Paper, CardActions, Container, TableContainer, TableRow, TableHead, TableCell, Button } from '@mui/material'
 
 
 
-const Listings = (props) => {
 
-  
+const LoggedInListings = (props) => {
+
+  const businesses = useSelector((state) => state.businesses.businesses);
+
     return (
         <Container>        
         <TableContainer component={Paper}>
@@ -17,6 +23,7 @@ const Listings = (props) => {
             <TableCell align="center">Description</TableCell>
             <TableCell align="center">Address</TableCell>
             <TableCell align="center">Hours</TableCell>
+            <TableCell align="center">Delete</TableCell>
         
           </TableRow>
           </TableHead>
@@ -34,14 +41,23 @@ const Listings = (props) => {
                 <TableCell align="left">{business.description}</TableCell>
                 <TableCell align="left">{business.address}</TableCell>
                 <TableCell align="left">{business.hours}</TableCell>
+                <TableCell>
+                            <DeleteIcon
+                                // add onClick method here
+                                onClick={() => props.removeBusiness(idx)}
+                                className="icon text-red" />
+                        </TableCell>
               </TableRow>
             ))}
           </TableBody>
             
         </Table>
         </TableContainer>
+        <Button>
+          <AddListing />
+        </Button>
         </Container>
     )
 };
 
-export default Listings;
+export default LoggedInListings;
