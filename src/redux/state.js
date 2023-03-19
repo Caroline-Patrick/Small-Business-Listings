@@ -2,7 +2,8 @@ export const initialState = {
  
     businesses: [
       {
-         name: 'Pinthouse Pizza',
+        id: 1, 
+        name: 'Pinthouse Pizza',
          description: 'Craft brewpub. Award winning beer and amazing pizza!',
          address: '4236 S Lamar Blvd, Austin, TX 78704',
          hours: 'Mon-Sun: 11am-11pm',
@@ -10,6 +11,7 @@ export const initialState = {
          lng: -97.79586044232892,
        },
        {
+         id: 2,
          name: 'Home Slice Pizza',
          description: 'Neighborhood pizza joint serving authentic NY-Style pizza.',
          address: '1415 S Congress Ave, Austin, TX 78704',
@@ -18,7 +20,8 @@ export const initialState = {
          lng: -97.74945870085574,
        },
        {
-         name: 'Via 313',
+        id:3,
+        name: 'Via 313',
          description:
            'Authentic Detroit-Style pizza, right in the heart of Austin!',
          address: '1802 E 6th St, Austin, TX 78702',

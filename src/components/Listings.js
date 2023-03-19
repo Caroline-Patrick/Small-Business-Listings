@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, TableBody, Paper, CardActions, Container, Button, TableContainer, TableRow, TableHead, TableCell } from '@mui/material'
+import { Table, TableBody, Paper, CardActions, Container, TableContainer, TableRow, TableHead, TableCell } from '@mui/material'
 import { Link } from 'react-router-dom';
 
 
@@ -26,7 +26,7 @@ const Listings = (props) => {
                 <TableCell component="th" scope="row">
               
                   <CardActions style={{ color: 'mediumblue' }}>
-                      <Link to={`/Map/${business.name}`}>{business.name}</Link>
+                      <Link to={`/details/${business.id}`}>{business.name}</Link>
                  </CardActions>
                 </TableCell>
                 <TableCell align="left">{business.description}</TableCell>

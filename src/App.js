@@ -1,7 +1,6 @@
 
 import React from 'react';
 import Navigation from './components/Navigation';
-import Listings from './components/Listings'
 import './App.css'
 import Router from './Router'
 import { BrowserRouter } from 'react-router-dom'

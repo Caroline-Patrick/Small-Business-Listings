@@ -13,21 +13,13 @@ const Navigation = () => {
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" style={{ flexGrow: "1" }}>
-                    FakeCars.com
+                    Businesses
                 </Typography>
                 <ul className="nav-list">
                     <li className="nav-list-item">
-                        <Link to="/">Home</Link>
+                        <Link to="/">Listings</Link>
                     </li>
-                    <li className="nav-list-item">
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li className="nav-list-item">
-                        <Link to="/dashboard">Dasboard</Link>
-                    </li>
-                    <li className="nav-list-item">
-                        <Link to="/import">Import</Link>
-                    </li>
+            
                 </ul>
             </Toolbar>
         </AppBar>
