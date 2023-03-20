@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { v4 as uuidv4 } from 'uuid';
 
 import {
   Card,
@@ -17,12 +17,13 @@ function AddListing({ addBusiness }) {
   const [description, setDescription] = useState('');
   const [address, setAddress] = useState('');
   const [hours, setHours] = useState('');
-  const [lat, setLat] = useState();
-  const [lng, setLng] = useState();
+  const [lat, setLat] = useState('');
+  const [lng, setLng] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newListing = {
+      id: uuidv4(),
       name,
       description,
       address,
@@ -35,8 +36,8 @@ function AddListing({ addBusiness }) {
     setDescription('');
     setAddress('');
     setHours('');
-    setLat();
-    setLng();
+    setLat('');
+    setLng('');
   };
 
   return (

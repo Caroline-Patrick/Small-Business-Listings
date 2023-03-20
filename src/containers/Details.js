@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Details from '../components/Details';
+import AddListing from '../containers/AddListing';
 
 const mapStateToProps = (state) => {
     console.log(state)

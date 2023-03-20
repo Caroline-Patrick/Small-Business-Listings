@@ -1,13 +1,19 @@
 import React, {useEffect, useRef} from 'react';
-import {useRoutes, useParams} from 'react-router-dom';
-import {Container} from '@mui/material'
+import {useParams} from 'react-router-dom';
+import {Container} from '@mui/material';
+
+
+
 
 const Details =(props)=> {
+   
     const {id }= useParams();
     const business = props.businesses.find(b => b.id == id);
+ 
     const mapRef = useRef(null);
 
-    useEffect(()=> {
+    useEffect(()=> { 
+        if (!business) return
         const google =window.google;
         const map = new google.maps.Map(mapRef.current, {
             center: {lat: business.lat, lng: business.lng},
